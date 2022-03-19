@@ -8,10 +8,10 @@
             a = b;
             b = temp;
         }
-
+        #region InterchangeSort
         public static void InterchangeSort(int[] a, int n)
         {
-            for (int i = 0; i < n-1; i++)
+            for (int i = 0; i < n - 1; i++)
             {
                 for( int j = i + 1; j < n ; j++)
                 {
@@ -22,7 +22,8 @@
                 }
             }
         }
-        
+        #endregion
+        #region BubbleSort
         public static void BubbleSort(int[] a, int n)
         {
             for (int i = 0; i < n - 1; i++)
@@ -36,7 +37,8 @@
                 }
             }
         }
-
+        #endregion
+        #region InsertionSort
         public static void InsertionSort(int[] a, int n)
         {
             int pos, x;
@@ -52,7 +54,8 @@
                 a[pos] = x;
             }
         }
-
+        #endregion
+        #region SelectionSort
         public static void SelectionSort(int[] a, int n)
         {
             int min;
@@ -72,5 +75,6 @@
                 }
             }
         }
+        #endregion
     }
 }
