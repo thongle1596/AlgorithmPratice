@@ -14,10 +14,11 @@ namespace AlgorithmPratice
 
             Console.WriteLine("Before: " + "[{0}]", string.Join(", ", a));
 
-            InterchangeSort(a, m);
+            InterchangeSort(a, n);
             BubbleSort(a, n);
             InsertionSort(a, n);
             SelectionSort(a, n);
+            QuickSort(a, 0, 7);
 
             Console.WriteLine("After: " + "[{0}]", string.Join(", ", a));
             Console.ReadKey();

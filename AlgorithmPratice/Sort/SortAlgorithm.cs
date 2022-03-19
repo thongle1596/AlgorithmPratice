@@ -76,5 +76,46 @@
             }
         }
         #endregion
+        #region QuickSort
+        public static int Partition(int[] a, int left, int right)
+        {
+            int pivot = a[left];
+            while(true)
+            {
+                while(a[left] < pivot)
+                {
+                    left++;
+                }
+                while(a[right] > pivot)
+                {
+                    right--;
+                }
+                if (left < right)
+                {
+                    Swap(ref a[right], ref a[left]);
+                }
+                else
+                {
+                    return right;
+                }
+            }
+        }
+        public static void QuickSort(int[] a, int left, int right)
+        {
+            int pivot;
+            if(left < right)
+            {
+                pivot = Partition(a, left, right);
+                if(pivot > 1)
+                {
+                    QuickSort(a, left, pivot - 1);
+                }
+                if(pivot + 1 < right)
+                {
+                    QuickSort(a, pivot + 1, right);
+                }
+            }
+        }
+        #endregion
     }
 }
